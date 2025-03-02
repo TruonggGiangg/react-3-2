@@ -11,7 +11,7 @@ $text-color: #4a4a4a; // Màu chữ tối hơn để dễ đọc
   .nav {
     width: 30%;
     padding: 20px;
-
+    border-right: 1px #ccc solid;
     .nav-contain{
       display: flex;
       flex-direction: column;
@@ -119,7 +119,7 @@ $text-color: #4a4a4a; // Màu chữ tối hơn để dễ đọc
   justify-content: space-between;
   align-items: center;
   padding: 12px;
-
+  border-bottom: 1px #ccc solid;
   .logo {
     padding: 0 20px;
     margin: 0 20px;
