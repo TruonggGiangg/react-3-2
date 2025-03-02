@@ -1,0 +1,177 @@
+$primary-color: #ff69b4; // Hồng nhạt
+$secondary-color: #d63384; // Hồng đậm hơn để tạo độ tương phản
+$bg-color: #ffe6f2; // Nền hồng nhạt nhẹ
+$text-color: #4a4a4a; // Màu chữ tối hơn để dễ đọc
+
+.contain {
+  display: flex;
+  min-height: 100vh;
+  // background: $bg-color;
+
+  .nav {
+    width: 30%;
+    padding: 20px;
+
+    .nav-contain{
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+
+      .checkbox-group{
+        display: flex;
+        flex-wrap: wrap;
+
+        .checkbox{
+          display: flex;
+          width: 50%;
+          padding-right: 12px;
+          margin-top: 20px;
+          label{
+            padding: 0 8px;
+          }
+
+          input[type="checkbox"] {
+            appearance: none; // Ẩn radio mặc định
+            width: 16px;
+            height: 16px;
+            border: 2px solid #d63384; // Viền hồng đậm
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            padding: 0; // Không cần padding cho radio
+          
+            &:checked {
+              background-color: #ff69b4; // Màu nền hồng khi chọn
+              border: 2px solid #ff69b4;
+            }
+          
+            &:checked::before {
+              content: "";
+              width: 8px;
+              height: 8px;
+              background: white;
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+      .rating-group{
+        .rating{
+          display: flex;
+          align-items: center;
+          padding: 12px 0;
+          input[type="radio"] {
+            appearance: none; // Ẩn radio mặc định
+            width: 16px;
+            height: 16px;
+            border: 2px solid #d63384; // Viền hồng đậm
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            padding: 0; // Không cần padding cho radio
+          
+            &:checked {
+              background-color: #ff69b4; // Màu nền hồng khi chọn
+              border: 2px solid #ff69b4;
+            }
+          
+            &:checked::before {
+              content: "";
+              width: 8px;
+              height: 8px;
+              background: white;
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+          img{
+            margin-left: 20px;
+          }
+        }
+      }
+      .apply{
+
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    color: $text-color;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+
+  .logo {
+    padding: 0 20px;
+    margin: 0 20px;
+  }
+
+  .menu {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    
+    .menu-item {
+      margin: 0 4px;
+      padding: 12px 32px;
+      border-radius: 12px;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .menu-item:hover {
+      background: #ffb6c1; // Hồng nhạt hơn cho hiệu ứng hover
+    }
+  }
+
+  .search-input {
+    width: 380px;
+    padding: 6px 20px;
+    border: 1px solid $secondary-color;
+    border-radius: 6px;
+  }
+
+  .recipe-btn {
+    padding: 12px;
+    border-radius: 8px;
+    background: $primary-color;
+    color: white;
+    border: none;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+  .avatar{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+  }
+}
+
+.footer-contain{
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  color: #d1d1d1;
+}
