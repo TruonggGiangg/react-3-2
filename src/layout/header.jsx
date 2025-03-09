@@ -1,6 +1,24 @@
 import logo from '../assets/img/avatar_small.png'
-import avatar from '../assets/img/avatar.png'
+
+import { getUserAvatar } from '../services/api';
+import { useEffect, useState } from 'react';
+
+
 const Header = () => {
+    const [avatar, setAvatar] = useState("");
+
+    useEffect(() => {
+        const fetchApi = async () => {
+            const res = await getUserAvatar();
+            if (res.users) {
+                setAvatar(res.users[0].image);
+            }
+        };
+        fetchApi();
+    }, []);
+
+    console.log(avatar)
+
     return (
         <>
             <div className="header">
